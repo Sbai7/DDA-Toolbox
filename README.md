@@ -72,9 +72,9 @@ Conventional particle tracking methods are not always robust or practical for ge
 
 
 ## Getting started 
-- Copy the contents of the downloaded zip file in any folder of your drive or home directory.
-- Add this directory and all its subdirectories to MATLAB's path (click on "Set Path" icon in the "HOME" toolbar at the top of MATLAB's "Command Window"). This will bring the "Set Path" dialog box. Next, click on "Add with Subfolders..." button lettign you to select the folder where you install the DDA package. Finally, click on "Save" button followed by another click on "Close" button. 
-- Go the the 'examples" subdirectory of the installation folder and study the provided examples. Each example comes in two flavors: (1) a plain text .m Matlab script file, and (ii) live script file where not only the descriptions by also all text and graphical results were precomputed. You may rerun these live scripts to intercatively solve the examples.
+- Copy the contents of the downloaded zip file to any folder on your drive or home directory.
+- Add this folder and all its subdirectories to MATLAB’s path. To do this, click on the "Set Path" icon in the "HOME" toolbar at the top of MATLAB’s Command Window. This will open the "Set Path" dialog box. Next, click the "Add with Subfolders..." button and select the folder where you installed the DDA package. Finally, click the "Save" button, followed by the "Close" button. 
+- Navigate to the "examples" subdirectory within the installation folder and review the provided examples. Each example is available in two formats: (1) a plain text .m MATLAB script file, and (2) a live script file, where not only the descriptions but also the text and graphical results are precomputed. You can rerun these live scripts to interactively solve the examples.
 
 
 
