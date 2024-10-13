@@ -1,4 +1,4 @@
-# The Double Delineation Appraoch Toolbox
+# The Double Delineation Approach Toolbox
 The double delineation approach (DDA) is a new concept in groundwater modelling that was developed in the following couple of papers by Dr. M. A. Sbai. The primary focus was the delineation of capture zones in groundwater flow systems, however the developed technique goes far beyond that and has many other applications as briefly described in the following:
 
 
