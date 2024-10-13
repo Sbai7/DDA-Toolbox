@@ -3,7 +3,7 @@ The double delineation approach (DDA) is a new concept in groundwater modelling 
 
 
 ## Paper 1
-[Sbai, M.A. (2018). A Practical Grid-Based Alternative Method to Advective Particle Tracking. Groundwater, 56(6), 881-892. https://doi.org/10.1111/gwat.12646](https://doi.org/10.1111/gwat.12646)
+[Sbai, M.A. (2018). A Practical Grid-Based Alternative Method to Advective Particle Tracking. Groundwater, 56(6), 881-892. https://doi.org/10.1111/gwat.12646](https://www.researchgate.net/publication/323339565_A_Practical_Grid-Based_Alternative_Method_to_Advective_Particle_Tracking)
 
 ### Objective
 Proposes a grid-based alternative to the conventional advective particle tracking method used in groundwater flow simulations.
@@ -35,7 +35,7 @@ Conventional particle tracking methods are not always robust or practical for ge
 
 
 ## Paper 2
-[Sbai, M.A. (2020). A Dual Delineation Approach to Untangle Interferences in Well Doublets Systems. Groundwater, 58(6), 894-902. https://doi.org/10.1111/gwat.12978](https://doi.org/10.1111/gwat.12978)
+[Sbai, M.A. (2020). A Dual Delineation Approach to Untangle Interferences in Well Doublets Systems. Groundwater, 58(6), 894-902. https://doi.org/10.1111/gwat.12978](https://www.researchgate.net/publication/338175524_A_Dual_Delineation_Approach_to_Untangle_Interferences_in_Well_Doublets_Systems)
 
 ### Objective 
 - The paper extends the DDA, which was initially introduced to delineate groundwater capture zones around wells. This extended approach helps to untangle interferences in well doublet systems, such as those in geothermal reservoirs, by delineating groundwater contribution areas.
