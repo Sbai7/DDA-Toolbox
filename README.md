@@ -77,7 +77,35 @@ Conventional particle tracking methods are not always robust or practical for ge
 - Navigate to the "examples" subdirectory within the installation folder and review the provided examples. Each example is available in two formats: (1) a plain text .m MATLAB script file, and (2) a live script file, where not only the descriptions but also the text and graphical results are precomputed. You can rerun these live scripts to interactively solve the examples.
 
 
+## Citing
 
+Cite the following publications if you got some results using this toolbox:
 
+```
+@article{sbai-2018,
+  author  = {M. A. Sbai},
+  title   = {{A Practical Grid-Based Alternative Method to Advective Particle Tracking}},
+  journal = {Groundwater},
+  volume  = {56},
+  number  = {6},
+  pages   = {881-892},
+  year    = {2018},
+  doi     = {https://doi.org/10.1111/gwat.12646},
+  url     = {https://ngwa.onlinelibrary.wiley.com/doi/10.1111/gwat.12646},
+}
+```
 
+```
+@article{sbai-2020,
+  author  = {M. A. Sbai},
+  title   = {{A Dual Delineation Approach to Untangle Interferences in Well Doublets Systems}},
+  journal = {Groundwater},
+  volume  = {58},
+  number  = {6},
+  pages   = {894-902},
+  year    = {2020},
+  doi     = {https://doi.org/10.1111/gwat.12978},
+  url     = {https://ngwa.onlinelibrary.wiley.com/doi/10.1111/gwat.12978},
+}
+```
 
