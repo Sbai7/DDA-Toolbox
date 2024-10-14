@@ -80,7 +80,7 @@ Conventional particle tracking methods are not always robust or practical for ge
 
 ## Citing
 
-Cite the following publications if you got some results using this toolbox:
+If you use the Double Delineation Approach Toolbox or any of its code in your research, please acknowledge its use by citing the following papers:
 
 ```
 @article{sbai-2018,
