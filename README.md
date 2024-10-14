@@ -73,6 +73,11 @@ Conventional particle tracking methods are not always robust or practical for ge
 - The approach can be easily implemented in existing groundwater models and extended to broader applications, including shallow aquifer systems, recharge zones, and other water management challenges.
 
 
+## Other related publications
+- [Sbai, M.A. (2019). Well Rate and Placement for Optimal Groundwater Remediation Design with A Surrogate Model. Water, 11(11), 2233. https://doi.org/10.3390/w11112233](https://www.researchgate.net/publication/336810366_Well_Rate_and_Placement_for_Optimal_Groundwater_Remediation_Design_with_A_Surrogate_Model)
+- [Sbai, M.A., & Larabi, A. (2020). On Solving Groundwater Flow and Transport Models with Algebraic Multigrid Preconditioning. Groundwater, 58(6), 835-844. https://doi.org/10.1111/gwat.13016](341540687_On_Solving_Groundwater_Flow_and_Transport_Models_with_Algebraic_Multigrid_Preconditioning)
+
+
 ## Getting started 
 - Copy the contents of the downloaded zip file to any folder on your drive or home directory.
 - Add this folder and all its subdirectories to MATLAB’s path. To do this, click on the "Set Path" icon in the "HOME" toolbar at the top of MATLAB’s Command Window. This will open the "Set Path" dialog box. Next, click the "Add with Subfolders..." button and select the folder where you installed the DDA package. Finally, click the "Save" button, followed by the "Close" button. 
@@ -104,10 +109,25 @@ If you use the Double Delineation Approach Toolbox or any of its code in your re
   journal = {Groundwater},
   volume  = {58},
   number  = {5},
-  pages   = 822-830},
+  pages   = {822-830},
   year    = {2020},
   doi     = {https://doi.org/10.1111/gwat.12978},
   url     = {https://ngwa.onlinelibrary.wiley.com/doi/10.1111/gwat.12978},
 }
 ```
+
+```
+@article{sbai-2021,
+  author  = {M. A. Sbai and A. Larabi},
+  title   = {{On Solving Groundwater Flow and Transport Models with Algebraic Multigrid Preconditioning}},
+  journal = {Groundwater},
+  volume  = {59},
+  number  = {1},
+  pages   = {100-108},
+  year    = {2021},
+  doi     = {https://doi.org/10.1111/gwat.13016},
+  url     = {https://ngwa.onlinelibrary.wiley.com/doi/10.1111/gwat.13016},
+}
+```
+
 
