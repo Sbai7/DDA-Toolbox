@@ -1,7 +1,8 @@
+![Alt text](figures/banner.png?raw=true "")
+
+
 # The Double Delineation Approach Toolbox
 The double delineation approach (DDA) is a new concept in groundwater modelling that was developed in the following couple of papers by Dr. M. A. Sbai. The primary focus was the delineation of capture zones in groundwater flow systems, however the developed technique goes far beyond that and has many other applications as briefly described in the following:
-
-![Alt text](figures/banner.png?raw=true "")
 
 ## Paper 1
 [Sbai, M.A. (2018). A Practical Grid-Based Alternative Method to Advective Particle Tracking. Groundwater, 56(6), 881-892. https://doi.org/10.1111/gwat.12646](https://www.researchgate.net/publication/323339565_A_Practical_Grid-Based_Alternative_Method_to_Advective_Particle_Tracking)
