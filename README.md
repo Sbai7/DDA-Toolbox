@@ -75,7 +75,7 @@ Conventional particle tracking methods are not always robust or practical for ge
 
 ## Other related publications
 - [Sbai, M.A. (2019). Well Rate and Placement for Optimal Groundwater Remediation Design with A Surrogate Model. Water, 11(11), 2233. https://doi.org/10.3390/w11112233](https://www.researchgate.net/publication/336810366_Well_Rate_and_Placement_for_Optimal_Groundwater_Remediation_Design_with_A_Surrogate_Model)
-- [Sbai, M.A., & Larabi, A. (2020). On Solving Groundwater Flow and Transport Models with Algebraic Multigrid Preconditioning. Groundwater, 58(6), 835-844. https://doi.org/10.1111/gwat.13016](341540687_On_Solving_Groundwater_Flow_and_Transport_Models_with_Algebraic_Multigrid_Preconditioning)
+- [Sbai, M.A., & Larabi, A. (2020). On Solving Groundwater Flow and Transport Models with Algebraic Multigrid Preconditioning. Groundwater, 58(6), 835-844. https://doi.org/10.1111/gwat.13016](https://www.researchgate.net/publication/341540687_On_Solving_Groundwater_Flow_and_Transport_Models_with_Algebraic_Multigrid_Preconditioning)
 
 
 ## Getting started 
