@@ -1,116 +1,126 @@
 classdef Color
-    % Color   Summary of Color class
-    % Facilitates color management in MATLAB 2D/3D graphics.
-    % This class stores an extended list of colors by their full name and
-    % their corresponding 1x3 RGB (e.g. Red-Green-Blue) arrays in a single
-    % container map. 
-    %
-    % Color Properties:
-    %    All this class properties are protected or private to promote 
-    %    object oriented reuse. 
-    % 
-    % Color Methods: 
-    %   language     - returns the language used by the current instance of
-    %                  Color to identify clor keys. Supported languages are
-    %                  english, french, and spanish.
-    %
-    %    rgb         - returns the RGB triplet array of one or more colors
-    %                  identified by their name. If a color does not fit 
-    %                  inside the list of supported colors it is simply 
-    %                  ignored. When input colors is a cell string each 
-    %                  line in the returned RGB matrix corresponds to one 
-    %                  color.
-    %
-    %    list        - prints a list of supported colors by this class into
-    %                  the console.
-    %
-    %    colors      - returns the list of supported colors as a cell
-    %                  string.
-    %
-    %    plot        - plots a graphic/chart of all supported colors which
-    %                  could be used to quickly localize a given color
-    %                  name. 
-    % 
-    % Examples:
-    % 
-    % (1) list available colors:
-    % list(Color) 
-    % aliceblue
-    % antiquewhite
-    % aqua
-    % aquamarine
-    % ...
-    %
-    % (2) plot a chart of all available colors:
-    % plot(Color);
-    %
-    % (3) get RGB color triplet for 'Maroon: 
-    % [RGB,~] = rgb(Color,'Maroon')
-    % RGB = 
-    %     0.5020         0         0
-    %
-    % (4) get RGB color matrx for colors 'Beige' 'Maroon' 'SeaShell' and 
-    %     'deep pink' plus one erroneous color name (neglected):
-    % rgb(Color,{'Beige' 'Maroon' 'SeaShell' 'deep pink' 'error'})
-    % ans =
-    %     0.9608    0.9608    0.8627
-    %     0.5020         0         0
-    %     1.0000    0.9608    0.9333
-    %     1.0000    0.0784    0.5765
-    %
-    % (5) plot the sine function with a 'deep pink' color:
-    % plot(linspace(0,2*pi,100),sin(linspace(0,2*pi,100)), ...
-    %      'color',rgb(Color,'deep pink'));
-    % legend('sin(x)')
-    %
-    % (6) load a Color object with French color names, get RGB triplet for 
-    %     'orchidée sombre' color, and plot a chart with French colors:
-    % clr_fr = Color('Language','francais'); 
-    % rgb(clr_fr,'orchidée sombre')
-    % ans =
-    %     0.6000    0.1961    0.8000
-    % plot(clr_fr);
-    %
-    %(7) load a Color object with Spanish color names, get RGB triplet for
-    %    'azul' color, and plot a chart with Spanish colors:
-    % clr_es = Color('Language','espanol');
-    % rgb(clr_es,'azul')
-    % ans = 
-    %     0     0     1
-    %
-    % REFERENCES 
-    % 
-    % [1] 'RGB Color Codes Chart',
-    % http://www.rapidtables.com/web/color/RGB_Color.htm 
-    %
-    % [2] 'HTML Color Codes',
-    % http://www.rapidtables.com/web/color/html-color-codes.htm 
-    %
-    % [3] 'CSS Color Module Level 3', https://www.w3.org/TR/css3-color/
-    % 
-    % Author: 
-    % 
-    % M.A. Sbai (Ph.D.) 
-    % Expert Groundwater Modelling Scientist 
-    % BRGM (French Geological Survey)
-    % D3E/GDR
-    % 
-    % Versions:
-    %
-    % 1.0 - Released 27/04/2017 
-    %       Compatible with the RGB Color Codes Chart see reference [1].
-    %
-    % 2.0 - Released 02/05/2017
-    %       Compatible also with HTML/CSS3 color codes (see references
-    %        [2,3]). 
-    %       Accepts case insensitive color names so 'darksalmon', 'dark
-    %        salmon', 'DarkSalmon', 'Dark Salmon' are all equivalent.
-    %       Some functions were renamed (i.e. getRGB to rgb, and plotColors 
-    %        changed to plot). 
-    %
-    % 3.0 - Released 04/05/2017
-    %       Add French and Spanish languages support.
-    %
+% Color   Summary of Color class
+% Facilitates color management in MATLAB 2D/3D graphics.
+% This class stores an extended list of colors by their full name and
+% their corresponding 1x3 RGB (e.g. Red-Green-Blue) arrays in a single
+% container map. 
+%
+% Color Properties:
+%    All this class properties are protected or private to promote 
+%    object oriented reuse. 
+% 
+% Color Methods: 
+%   language     - returns the language used by the current instance of
+%                  Color to identify clor keys. Supported languages are
+%                  english, french, and spanish.
+%
+%    rgb         - returns the RGB triplet array of one or more colors
+%                  identified by their name. If a color does not fit 
+%                  inside the list of supported colors it is simply 
+%                  ignored. When input colors is a cell string each 
+%                  line in the returned RGB matrix corresponds to one 
+%                  color.
+%
+%    list        - prints a list of supported colors by this class into
+%                  the console.
+%
+%    colors      - returns the list of supported colors as a cell
+%                  string.
+%
+%    plot        - plots a graphic/chart of all supported colors which
+%                  could be used to quickly localize a given color
+%                  name. 
+% 
+% Examples:
+% 
+% (1) list available colors:
+% list(Color) 
+% aliceblue
+% antiquewhite
+% aqua
+% aquamarine
+% ...
+%
+% (2) plot a chart of all available colors:
+% plot(Color);
+%
+% (3) get RGB color triplet for 'Maroon: 
+% [RGB,~] = rgb(Color,'Maroon')
+% RGB = 
+%     0.5020         0         0
+%
+% (4) get RGB color matrx for colors 'Beige' 'Maroon' 'SeaShell' and 
+%     'deep pink' plus one erroneous color name (neglected):
+% rgb(Color,{'Beige' 'Maroon' 'SeaShell' 'deep pink' 'error'})
+% ans =
+%     0.9608    0.9608    0.8627
+%     0.5020         0         0
+%     1.0000    0.9608    0.9333
+%     1.0000    0.0784    0.5765
+%
+% (5) plot the sine function with a 'deep pink' color:
+% plot(linspace(0,2*pi,100),sin(linspace(0,2*pi,100)), ...
+%      'color',rgb(Color,'deep pink'));
+% legend('sin(x)')
+%
+% (6) load a Color object with French color names, get RGB triplet for 
+%     'orchidée sombre' color, and plot a chart with French colors:
+% clr_fr = Color('Language','francais'); 
+% rgb(clr_fr,'orchidée sombre')
+% ans =
+%     0.6000    0.1961    0.8000
+% plot(clr_fr);
+%
+%(7) load a Color object with Spanish color names, get RGB triplet for
+%    'azul' color, and plot a chart with Spanish colors:
+% clr_es = Color('Language','espanol');
+% rgb(clr_es,'azul')
+% ans = 
+%     0     0     1
+%
+% REFERENCES 
+% 
+% [1] 'RGB Color Codes Chart',
+% http://www.rapidtables.com/web/color/RGB_Color.htm 
+%
+% [2] 'HTML Color Codes',
+% http://www.rapidtables.com/web/color/html-color-codes.htm 
+%
+% [3] 'CSS Color Module Level 3', https://www.w3.org/TR/css3-color/
+% 
+% Versions:
+%
+% 1.0 - Released 27/04/2017 
+%       Compatible with the RGB Color Codes Chart see reference [1].
+%
+% 2.0 - Released 02/05/2017
+%       Compatible also with HTML/CSS3 color codes (see references
+%        [2,3]). 
+%       Accepts case insensitive color names so 'darksalmon', 'dark
+%        salmon', 'DarkSalmon', 'Dark Salmon' are all equivalent.
+%       Some functions were renamed (i.e. getRGB to rgb, and plotColors 
+%        changed to plot). 
+%
+% 3.0 - Released 04/05/2017
+%       Add French and Spanish languages support.
+%
+% Author: M.A. Sbai, Ph.D.
+%
+% Copyright (C) 2024 Mohammed Adil Sbai
+%
+% This program is free software: you can redistribute it and/or modify it
+% under the terms of the GNU General Public License as published by the
+% Free Software Foundation, either version 3 of the License, or (at your
+% option) any later version.
+%
+% This program is distributed in the hope that it will be useful, but 
+% WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+% Public License for more details.
+%
+% You should have received a copy of the GNU General Public License along
+% with this program. If not, see <http://www.gnu.org/licenses/>.
+
     
     properties (Access = protected)
         c           % containers.Map consisting of colors and their RGB 

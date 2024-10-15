@@ -1,27 +1,43 @@
-function A = upwindAdvectionMatrix(Grid, V, q)
-%UpwindAdvectionMatrix: Generates the pure upwind advection matrix for a 
+function A = upwindAdvectionMatrix(Grid, V, Qw)
+% upwindAdvectionMatrix Generates the pure upwind advection matrix for a 
 % mass/heat/particle transport process based on the spatial distribution of 
 % the velocity field.
 %
 % INPUTS:
 %   Grid - Grid structure used for discretization
 %   V    - Structure of mid-cells edges velocities (x, y, z)
-%   q    - Injection/Production flow rates
+%   Qw   - Injection/Production flow rates
 %
 % OUTPUT:
 %   A    - Sparse matrix of the advection process
 % 
+%
 % Author: M.A. Sbai, Ph.D.
-% 
+%
+% Copyright (C) 2024 Mohammed Adil Sbai
+%
+% This program is free software: you can redistribute it and/or modify it
+% under the terms of the GNU General Public License as published by the
+% Free Software Foundation, either version 3 of the License, or (at your
+% option) any later version.
+%
+% This program is distributed in the hope that it will be useful, but 
+% WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+% Public License for more details.
+%
+% You should have received a copy of the GNU General Public License along
+% with this program. If not, see <http://www.gnu.org/licenses/>.
+
 
 % Number of grid cells
 Nx = Grid.Nx; 
 Ny = Grid.Ny; 
 Nz = Grid.Nz; 
-N = Grid.N;
+N  = Grid.N;
 
 % Extract production flow rates (i.e., negative part)
-productionFlowRates = min(q, 0);
+productionFlowRates = min(Qw, 0);
 
 % Separate velocity components into positive and negative parts
 xNegative = min(V.x, 0);

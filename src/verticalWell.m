@@ -20,7 +20,23 @@ function W = verticalWell(W, G, i, j, k_layers, rate, varargin)
 %   W = verticalWell([], G, 10, 20, [1, 2, 3], @(t) 300 * exp(-0.1 * t), 'type', 'injection', 'name', 'Well1', 'radius', 0.1);
 %   W = verticalWell(W, G, 5, 15, [2], [0 200; 1 250; 2 300; 4 150], 'type', 'pumping', 'name', 'Well2', 'radius', 0.15);
 %
-% M.A. Sbai, Ph.D.
+% Author: M.A. Sbai, Ph.D.
+%
+% Copyright (C) 2024 Mohammed Adil Sbai
+%
+% This program is free software: you can redistribute it and/or modify it
+% under the terms of the GNU General Public License as published by the
+% Free Software Foundation, either version 3 of the License, or (at your
+% option) any later version.
+%
+% This program is distributed in the hope that it will be useful, but 
+% WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+% Public License for more details.
+%
+% You should have received a copy of the GNU General Public License along
+% with this program. If not, see <http://www.gnu.org/licenses/>.
+
 
 % Default well radius and type
 radius = 0.1; % Default radius if not provided

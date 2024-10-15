@@ -1,18 +1,34 @@
 function Qw = getFlowRateVector(N, W, time)
-%getFlowRateVector Returns a N-by-1 cellwise array of all pumping or
+%getFlowRateVector Returns a N-by-1 cell-wise array of all pumping or
 %injection flow rates.
 %
 % Syntax: Qw = getFlowRateVector(N, W, time)
 %
 % Inputs:
-%   N    - SNumber of grid cells
+%   N    - Number of grid cells
 %   W    - Wells structure containing wells positions, rates, names, etc.
 %   time - Current simulation time
 %
 % Outputs:
-%   Qw   - A N-by-1 array of cellwise injection/production flow rates
+%   Qw   - A N-by-1 array of cell-wise injection/production flow rates
 %
 % Author: M.A. Sbai, Ph.D.
+%
+% Copyright (C) 2024 Mohammed Adil Sbai
+%
+% This program is free software: you can redistribute it and/or modify it
+% under the terms of the GNU General Public License as published by the
+% Free Software Foundation, either version 3 of the License, or (at your
+% option) any later version.
+%
+% This program is distributed in the hope that it will be useful, but 
+% WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+% Public License for more details.
+%
+% You should have received a copy of the GNU General Public License along
+% with this program. If not, see <http://www.gnu.org/licenses/>.
+
 
 %--- Initialize well flow rates (Qw) array
 Qw = zeros(N, 1);
