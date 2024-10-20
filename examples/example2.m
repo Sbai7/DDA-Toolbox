@@ -1,4 +1,4 @@
-%% Example/Tutorial 2: Steady-State Flow Recirculation Zone Around a Well Doublet
+%% Example 2: Steady-State Flow Recirculation Zone Around a Well Doublet
 % Flow recirculation zones around one or more pairs of injection and extraction 
 % wells are common in various groundwater flow, reservoir, and geothermal engineering 
 % applications. Typical examples include capture zone delineation, forced-gradient 

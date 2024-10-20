@@ -1,10 +1,10 @@
-%% Example/Tutorial 1: First Demonstration Test Problem
+%% Example 1: First Demonstration Test Problem
 % This is a demonstration problem taken from [<https://www.researchgate.net/publication/323339565_A_Practical_Grid-Based_Alternative_Method_to_Advective_Particle_Tracking 
 % 1>] to test the double delineation approach (DDA). It simulates diagonally oriented 
 % groundwater flow between a pair of injection and pumping wells located at the 
 % lower left and upper right corners of a homogeneous, isotropic aquifer, respectively. 
 % 
-% In this tutorial, we will: 
+% In this example, we will: 
 %% 
 % # Set up a Cartesian grid for the finite-difference simulation in a single-layer 
 % model. 
