@@ -1,20 +1,10 @@
 %% Example 3: Simulations of Travel and Residence Times in a Binary Hydraulic Conductivity Field
-% This is the second demonstration problem from [<https://www.researchgate.net/publication/323339565_A_Practical_Grid-Based_Alternative_Method_to_Advective_Particle_Tracking 
+%% Introduction
+% This is another demonstration problem from [<https://www.researchgate.net/publication/323339565_A_Practical_Grid-Based_Alternative_Method_to_Advective_Particle_Tracking 
 % 1>], used to test the Double Delineation Approach (DDA). It simulates diagonally 
 % oriented groundwater flow between an injection well and a pumping well, positioned 
 % at the lower left and upper right corners of a binary hydraulic conductivity 
 % field composed of randomly distributed permeable and less permeable materials.
-% 
-% In this example, we will: 
-%% 
-% # Set up the data for finite-difference travel time simulations in a single-layer 
-% model. 
-% # Simulate steady-state groundwater flow, followed by forward travel time 
-% calculations. 
-% # Visualize the flow using simulated flow lines through particle tracking. 
-% # Visualize the flow and advective transport using the Double Delineation 
-% Approach (DDA).
-% # Briefly discuss the results.
 %% 
 % We begin by clearing all variables in the workspace and then loading the relevant 
 % length and time constant units.
@@ -264,20 +254,18 @@ axis equal tight;                                       % fit axes to limits + x
 % [2] <https://www.researchgate.net/publication/331903631_Automatic_Generation_of_Locally_Refined_Composite_Grids_for_Efficient_Solute_Transport_Modeling 
 % Sbai, M.A. (2020). Automatic Generation of Locally Refined Composite Grids for 
 % Efficient Solute Transport Modeling. Groundwater, 58(1), 35-45. https://doi.org/10.1111/gwat.12882>
-
+%% 
 % Author: M.A. Sbai, Ph.D.
-%
+% 
 % Copyright (C) 2024 Mohammed Adil Sbai
-%
-% This program is free software: you can redistribute it and/or modify it
-% under the terms of the GNU General Public License as published by the
-% Free Software Foundation, either version 3 of the License, or (at your
-% option) any later version.
-%
-% This program is distributed in the hope that it will be useful, but 
-% WITHOUT ANY WARRANTY; without even the implied warranty of
-% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
-% Public License for more details.
-%
-% You should have received a copy of the GNU General Public License along
-% with this program. If not, see <http://www.gnu.org/licenses/>.
+% 
+% This program is free software: you can redistribute it and/or modify it under 
+% the terms of the GNU General Public License as published by the Free Software 
+% Foundation, either version 3 of the License, or (at your option) any later version.
+% 
+% This program is distributed in the hope that it will be useful, but WITHOUT 
+% ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS 
+% FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+% 
+% You should have received a copy of the GNU General Public License along with 
+% this program. If not, see <http://www.gnu.org/licenses/>.

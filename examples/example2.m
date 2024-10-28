@@ -1,24 +1,10 @@
-%% Example 2: Steady-State Flow Recirculation Zone Around a Well Doublet
-% Flow recirculation zones around one or more pairs of injection and extraction 
-% wells are common in various groundwater flow, reservoir, and geothermal engineering 
-% applications. Typical examples include capture zone delineation, forced-gradient 
-% tracer tests for aquifer characterization, in-situ remediation of contaminated 
-% groundwater, thermal assessments of open-loop well-doublet systems, seasonal 
-% heat storage and recovery, and cold fluid reinjection into low-enthalpy geothermal 
-% reservoirs. 
-% 
-% The purpose of this tutorial is to simulate steady-state flow patterns around 
-% a pair of injection and pumping wells. 
-% 
-% We will follow these steps to create a simulation script that models the steady-state 
-% flow patterns around a well doublet in a geothermal reservoir:
-%% 
-% # Set up the computational grid and wells.
-% # Perform a steady-state flow and travel times simulations around the well 
-% pair. 
-% # Visualize flownets. 
-% # Perform a three-way comparison against an analytical solution and another 
-% numerical solution.
+%% Example 2: Three Way Comparison Against Analytical and Numerical Solutions
+%% Introduction
+% This tutorial aims to compare the accuracy and performance of the double delineation 
+% approach (DDA) with other methods. To achieve this, we utilize an available 
+% analytical solution that calculates pathlines between an injection and pumping 
+% well. Additionally, we employ a numerical solution based on numerical integration 
+% in MATLAB for further comparison.
 %% 
 % We begin by clearing all variables in the workspace and then loading the relevant 
 % length and time constant units.
@@ -118,7 +104,7 @@ opts.fill = 'off';                          % specify type of contour plot => fi
     'LineColor','blue');
 
 %--- Draw streamlines at the same positions using Matlab ode solvers
-contourData = ExtractContourData(M);             % extract contour data from M matrix
+contourData = extractContourData(M);             % extract contour data from M matrix
 Ypos = zeros(size(contourData));                 % initialize Y positions of particles       
 for i = 1:length(Ypos)                           % find Y positions by intersecting residence 
    B = findIntersectionX(contourData, i, 3000);  % time contours with vertical line at Y = 3000 
@@ -257,65 +243,18 @@ hold off;
 % 
 % [3] Strack, O.D.L. (1989). _Groundwater Mechanics_, Prentice-Hall, Englewood 
 % Cliffs, NJ. 
-
-function contourData = ExtractContourData(contourMatrix)
-
-% Initialize variables to hold contour information
-contourData = {};
-index = 1;
-
-% Extract contour information
-while index <= size(contourMatrix, 2)
-    
-    % Get the height of the current contour line
-    Z_value = contourMatrix(1, index);
-    
-    % Get the number of vertices for the current contour line
-    N_value = contourMatrix(2, index);
-    
-    % Extract the vertices for this contour line
-    xCoords = contourMatrix(1, index+1:index+N_value);
-    yCoords = contourMatrix(2, index+1:index+N_value);
-    
-    % Store the contour line information
-    contourData{end+1} = struct('Z', Z_value, 'x', xCoords, 'y', yCoords);
-    
-    % Move to the next contour line in the matrix
-    index = index + N_value + 1;
-end
-
-end
-
-
-function intersectionPoint = findIntersectionX(contourData, contourIndex, x0)
-    % Check if the contour index is valid
-    if contourIndex < 1 || contourIndex > length(contourData)
-        error('Invalid contour index.');
-    end
-    
-    % Retrieve the x and y coordinates of the specified contour
-    xCoords = contourData{contourIndex}.x;
-    yCoords = contourData{contourIndex}.y;
-    
-    % Initialize the intersection point
-    intersectionPoint = []; 
-    
-    % Loop through the vertices and check for intersections
-    for i = 1:length(xCoords)-1
-        % Check if x0 is between the x values of the current segment
-        if (xCoords(i) <= x0 && xCoords(i+1) >= x0) || (xCoords(i) >= x0 && xCoords(i+1) <= x0)
-            % Linear interpolation to find the corresponding y value
-            % Calculate the slope of the line segment
-            slope = (yCoords(i+1) - yCoords(i)) / (xCoords(i+1) - xCoords(i));
-            % Interpolate to find the y value at x0
-            yIntersect = yCoords(i) + slope * (x0 - xCoords(i));
-            intersectionPoint = [x0, yIntersect]; % Store the intersection point
-            return; % Exit the function after finding the first intersection
-        end
-    end
-    
-    % If no intersection is found, return an empty array
-    if isempty(intersectionPoint)
-        warning('No intersection found for the specified contour at x = %.2f.', x0);
-    end
-end
+%% 
+% Author: M.A. Sbai, Ph.D.
+% 
+% Copyright (C) 2024 Mohammed Adil Sbai
+% 
+% This program is free software: you can redistribute it and/or modify it under 
+% the terms of the GNU General Public License as published by the Free Software 
+% Foundation, either version 3 of the License, or (at your option) any later version.
+% 
+% This program is distributed in the hope that it will be useful, but WITHOUT 
+% ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS 
+% FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+% 
+% You should have received a copy of the GNU General Public License along with 
+% this program. If not, see <http://www.gnu.org/licenses/>.

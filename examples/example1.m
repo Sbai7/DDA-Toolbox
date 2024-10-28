@@ -1,20 +1,9 @@
 %% Example 1: First Demonstration Test Problem
-% This is a demonstration problem taken from [<https://www.researchgate.net/publication/323339565_A_Practical_Grid-Based_Alternative_Method_to_Advective_Particle_Tracking 
+%% Introduction
+% This is a simple demonstration problem taken from [<https://www.researchgate.net/publication/323339565_A_Practical_Grid-Based_Alternative_Method_to_Advective_Particle_Tracking 
 % 1>] to test the double delineation approach (DDA). It simulates diagonally oriented 
 % groundwater flow between a pair of injection and pumping wells located at the 
 % lower left and upper right corners of a homogeneous, isotropic aquifer, respectively. 
-% 
-% In this example, we will: 
-%% 
-% # Set up a Cartesian grid for the finite-difference simulation in a single-layer 
-% model. 
-% # Add injection and pumping wells. 
-% # Simulate steady-state groundwater flow. 
-% # Visualize the results using flownets. 
-% # Simulate the forward travel times using the finite-difference method. 
-% # Visualize the isochrones in the aquifer using DDA. 
-% # Visualize flownets using DDA.
-% # Discuss shortly the results.
 %% 
 % We begin by clearing all variables in the workspace and then loading the relevant 
 % length and time constant units.
@@ -328,20 +317,18 @@ hold off;
 % [3] <https://www.researchgate.net/publication/341540687_On_Solving_Groundwater_Flow_and_Transport_Models_with_Algebraic_Multigrid_Preconditioning 
 % Sbai, M.A., & Larabi, A. (2020). On Solving Groundwater Flow and Transport Models 
 % with Algebraic Multigrid Preconditioning. Groundwater, 59(1), 100-108. https://doi.org/10.1111/gwat.13016>
-
+%% 
 % Author: M.A. Sbai, Ph.D.
-%
+% 
 % Copyright (C) 2024 Mohammed Adil Sbai
-%
-% This program is free software: you can redistribute it and/or modify it
-% under the terms of the GNU General Public License as published by the
-% Free Software Foundation, either version 3 of the License, or (at your
-% option) any later version.
-%
-% This program is distributed in the hope that it will be useful, but 
-% WITHOUT ANY WARRANTY; without even the implied warranty of
-% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
-% Public License for more details.
-%
-% You should have received a copy of the GNU General Public License along
-% with this program. If not, see <http://www.gnu.org/licenses/>.
+% 
+% This program is free software: you can redistribute it and/or modify it under 
+% the terms of the GNU General Public License as published by the Free Software 
+% Foundation, either version 3 of the License, or (at your option) any later version.
+% 
+% This program is distributed in the hope that it will be useful, but WITHOUT 
+% ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS 
+% FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+% 
+% You should have received a copy of the GNU General Public License along with 
+% this program. If not, see <http://www.gnu.org/licenses/>.
